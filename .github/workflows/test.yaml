@@ -8,27 +8,27 @@ on:
     branches:
     - main
 
-  jobs:
-    test:
-      name: ${{ matrix.name }}
-      runs-on: ${{ matrix.os }}
-      strategy:
-        fail-fast: false
-        matrix:
-          include:
+jobs:
+  test:
+    name: ${{ matrix.name }}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
 
-            - name: latest supported versions
-              os: ubuntu-latest
-              python: '3.10'
+          - name: latest supported versions
+            os: ubuntu-latest
+            python: '3.10'
 
-      steps:
-        - name: Install Python ${{ matrix.python }}
-          uses: actions/setup-python@v2
-          with:
-            python-version: ${{ matrix.python }}
-        - name: Install Dependencies
-          run: |
-            pip install tox
-        - name: Run Tests
-          run: |
-            tox --version
+    steps:
+      - name: Install Python ${{ matrix.python }}
+        uses: actions/setup-python@v2
+        with:
+          python-version: ${{ matrix.python }}
+      - name: Install Dependencies
+        run: |
+          pip install tox
+      - name: Run Tests
+        run: |
+          tox --version
