@@ -33,4 +33,5 @@ jobs:
           conda install tox
       - name: Run Tests
         run: |
+          conda activate test
           tox --version
