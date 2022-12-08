@@ -32,15 +32,16 @@ jobs:
             toxenv: py310-test-latest
 
     steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
       - name: Install Conda w/ Python ${{ matrix.python-version }}
         uses: conda-incubator/setup-miniconda@v2
         with:
+          activate-environment: soliket-tests
+          environment-file: soliket-tests.yml
+          auto-activate-base: false
           python-version: ${{ matrix.python-version }}
           channels: conda-forge
-      - name: Install Dependencies
-        shell: bash -el {0}
-        run: |
-          conda install tox
       - name: Run Tests
         shell: bash -el {0}
         run: |
