@@ -4,4 +4,6 @@ channels:
   - nodefaults
 dependencies:
   - pip
-  - tox
+  - compilers
+  - pip:
+      - -r requirements.txt
