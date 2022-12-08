@@ -12,3 +12,5 @@ fuzzywuzzy
 camb
 getdist
 cobaya
+pyccl
+sacc
