@@ -9,7 +9,9 @@ tqdm
 portalocker
 dill
 fuzzywuzzy
+astropy
 camb
+cosmopower
 getdist
 cobaya
 pyccl
