@@ -1,0 +1,7 @@
+name: soliket-tests
+channels:
+  - conda-forge
+  - nodefaults
+dependencies:
+  - pip
+  - tox
