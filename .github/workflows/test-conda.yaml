@@ -42,6 +42,16 @@ jobs:
           auto-activate-base: false
           python-version: ${{ matrix.python-version }}
           channels: conda-forge
+      - name: Install class
+        shell: bash -el {0}
+        run: |
+          if [[ ${MATRIX_OS} == "macos-11" ]]; then
+            export LDFLAGS="-L/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib"
+            export LDFLAGS="$LDFLAGS -L/Users/runner/miniconda3/envs/test/lib"
+            . install_class_osx.sh
+          fi
+        env:
+          MATRIX_OS: ${{ matrix.os }}
       - name: Run Tox
         shell: bash -el {0}
         run: |
