@@ -1,0 +1,16 @@
+tox
+numpy
+scipy
+pandas
+pyyaml
+py-bobyqa
+packaging
+tqdm
+portalocker
+dill
+fuzzywuzzy
+camb
+getdist
+cobaya
+pyccl
+sacc

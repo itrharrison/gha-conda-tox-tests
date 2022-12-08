@@ -4,4 +4,11 @@ channels:
   - nodefaults
 dependencies:
   - pip
-  - tox
+  - compilers
+  - cmake
+  - gsl
+  - fftw
+  - cython
+  - mpi4py
+  - pip:
+      - -r requirements.txt
