@@ -5,5 +5,10 @@ channels:
 dependencies:
   - pip
   - compilers
+  - cmake
+  - gsl
+  - fftw
+  - cython
+  - mpi4py
   - pip:
       - -r requirements.txt

@@ -42,7 +42,11 @@ jobs:
           auto-activate-base: false
           python-version: ${{ matrix.python-version }}
           channels: conda-forge
-      - name: Run Tests
+      - name: Run Tox
         shell: bash -el {0}
         run: |
           tox --version
+      - name: Run Cobaya
+        shell: bash -el {0}
+        run: |
+          python -c "import cobaya"
