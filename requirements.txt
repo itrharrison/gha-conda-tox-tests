@@ -2,6 +2,7 @@ tox
 numpy
 scipy
 pandas
+scikit-learn
 pyyaml
 py-bobyqa
 packaging

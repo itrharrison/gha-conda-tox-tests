@@ -41,7 +41,17 @@ jobs:
           environment-file: soliket-tests.yml
           auto-activate-base: false
           python-version: ${{ matrix.python-version }}
-          channels: conda-forge
+          use-mamba: true
+          miniforge-variant: Mambaforge
+      - name: Install class
+        shell: bash -el {0}
+        run: |
+          if [[ ${MATRIX_OS} == "macos-11" ]]; then
+            export LDFLAGS="-L/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib"
+            . install_class_osx.sh
+          fi
+        env:
+          MATRIX_OS: ${{ matrix.os }}
       - name: Run Tox
         shell: bash -el {0}
         run: |
