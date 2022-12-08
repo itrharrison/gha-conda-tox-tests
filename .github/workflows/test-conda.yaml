@@ -42,10 +42,6 @@ jobs:
           auto-activate-base: false
           python-version: ${{ matrix.python-version }}
           channels: conda-forge
-      - name: Install Dependencies
-        shell: bash -el {0}
-        run: |
-          conda install tox
       - name: Run Tests
         shell: bash -el {0}
         run: |
