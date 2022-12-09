@@ -3,12 +3,12 @@ channels:
   - conda-forge
   - nodefaults
 dependencies:
-  - pip
+  - virtualenv
   - compilers
   - cmake
   - gsl
   - fftw
+  - swig
   - cython
   - mpi4py
-  - pip:
-      - -r requirements.txt
+  - tox
