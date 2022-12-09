@@ -20,7 +20,7 @@ jobs:
           - name: latest supported versions
             os: ubuntu-latest
             python-version: '3.10'
-            toxenv: py37-test-oldest
+            toxenv: py310-test-oldest
 
           - name: oldest supported versions
             os: ubuntu-latest
