@@ -20,6 +20,7 @@ jobs:
           - name: latest supported versions
             os: ubuntu-latest
             python-version: '3.10'
+            toxenv: py310-test-latest
 
           - name: oldest supported versions
             os: ubuntu-latest
@@ -45,8 +46,4 @@ jobs:
       - name: Run Tox
         shell: bash -el {0}
         run: |
-          tox --version
-      - name: Run Cobaya
-        shell: bash -el {0}
-        run: |
-          python -c "import cobaya; print(cobaya.__version__)"
+          tox -e ${{ matrix.toxenv }} ${{ matrix.toxargs }} -- ${{ matrix.toxposargs }}
