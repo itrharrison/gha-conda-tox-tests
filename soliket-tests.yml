@@ -4,6 +4,7 @@ channels:
   - nodefaults
 dependencies:
   - pip
+  - virtualenv
   - compilers
   - cmake
   - gsl
