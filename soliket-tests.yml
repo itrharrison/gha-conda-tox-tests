@@ -8,6 +8,7 @@ dependencies:
   - cmake
   - gsl
   - fftw
+  - swig
   - cython
   - mpi4py
   - tox
