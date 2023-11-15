@@ -1,0 +1,23 @@
+[project]
+name = "gha-test"
+version = "0.1.dev1"
+authors = [
+	{name = "Ian Harrison", email = "harrisoni@cardiff.ac.uk"}
+]
+description = "A package for testing gha/tox/conda/setuptools"
+readme = "README.rst"
+requires-python = ">=3.8, <3.12"
+license = {text = "CC-BY"}
+dependencies = [
+    "requests",
+    'importlib-metadata; python_version<"3.8"',
+    "numpy",
+    "matplotlib"
+]
+
+[project.optional-dependencies]
+all = ["scipy"]
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
