@@ -11,6 +11,7 @@ license = {text = "CC-BY"}
 dependencies = [
     "requests",
     'importlib-metadata; python_version<"3.8"',
+    "pytest",
     "numpy",
     "matplotlib"
 ]
