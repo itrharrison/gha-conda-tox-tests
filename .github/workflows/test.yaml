@@ -19,7 +19,7 @@ jobs:
 
           - name: latest supported versions
             os: ubuntu-latest
-            python: '3.10'
+            python: '3.11'
 
     steps:
       - name: Install Python ${{ matrix.python }}
