@@ -1,10 +1,10 @@
 [project]
-name = "gha-test"
+name = "itrh-gha-test"
 version = "0.1.dev1"
 authors = [
 	{name = "Ian Harrison", email = "harrisoni@cardiff.ac.uk"}
 ]
-description = "A package for testing gha/tox/conda/setuptools"
+description = "A package for testing and learning gha/tox/conda/setuptools"
 readme = "README.rst"
 requires-python = ">=3.8, <3.12"
 license = {text = "CC-BY"}
