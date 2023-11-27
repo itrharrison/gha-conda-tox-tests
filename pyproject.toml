@@ -1,6 +1,6 @@
 [project]
 name = "itrh-gha-test"
-version = "0.1.dev4"
+version = "0.1.dev5"
 authors = [
 	{name = "Ian Harrison", email = "harrisoni@cardiff.ac.uk"}
 ]
