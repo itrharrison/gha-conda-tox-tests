@@ -17,7 +17,7 @@ plt.plot(x, x, 'c-', label='$\mathrm{Linear \, fit} \, x$') # LaTeX mathmode wit
 plt.plot(x, x**2., 'm-', label='$\mathrm{Quadratic \, fit} \, x^{2}$')
 plt.plot(xdata, (xdata + xdata**2.)/2., 'ko', label='$\mathrm{Data}$')
 plt.xlabel('$x \, [\mathrm{kms}^{-1}]$')
-plt.ylabel('$\Psi \, [\mathrm{arb.}]$')
+plt.ylabel('$\Delta \, [\mathrm{arb.}]$')
 plt.legend(frameon=False, fontsize='small', loc='upper left', numpoints=1)
 plt.savefig('linear_square.png', bbox_inches='tight', dpi=320)
 
