@@ -47,5 +47,6 @@ jobs:
       - name: Publish package distributions to TestPyPI
         uses: pypa/gh-action-pypi-publish@release/v1
         with:
+          user: __token__
           repository-url: https://test.pypi.org/legacy/
           print-hash: true
